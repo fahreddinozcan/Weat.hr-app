@@ -1,0 +1,64 @@
+.weather-current-detailed {
+  padding: 0.8rem 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto repeat(5, min-content);
+  column-gap: 2rem;
+  height: 20rem;
+}
+.weather-header {
+  display: inline-block;
+}
+.weather-current-section {
+  display: grid;
+  grid-template-columns: min-content auto auto;
+  align-items: center;
+  /* justify-content: flex-start; */
+  padding: 0.4rem 0.2rem;
+  gap: 1.2rem;
+
+  border-top: 1px solid #ced4da;
+}
+
+.weather-current-degree-text {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.weather-current-desc {
+  margin-left: auto;
+  text-align: right;
+  display: inline-block;
+}
+.weather-current-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.dew-point::before {
+  content: "\00B0";
+  font-size: 1rem;
+  width: 10rem;
+  height: 10rem;
+  /* background-color: black; */
+  top: 0;
+  right: 1.4rem;
+  position: relative;
+  font-size: 1rem;
+}
+
+.weather-icon {
+  margin-right: 3rem;
+  align-self: center;
+  position: relative;
+  z-index: -0;
+}
+
+.search-bar:focus-within .weather-icon {
+  visibility: hidden;
+  opacity: 0;
+}
+.weather-icon-icon {
+  width: 10rem;
+  height: 10rem;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}

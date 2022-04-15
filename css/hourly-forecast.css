@@ -1,0 +1,27 @@
+.weather-hourly-forecast {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 1rem;
+  height: 20rem;
+}
+.weather-hourly-forecast h3 {
+  grid-column: 1/-1;
+}
+.next-hours-btn {
+  width: 8rem;
+  grid-column: 1/-1;
+  padding: 0;
+  height: 2rem;
+}
+
+.next-hours-btn-txt {
+  font-size: 0.9rem;
+}
+
+.weather-hourly-forecast .next-hours-btn {
+  margin-top: 1rem;
+}
+.hourly-icon-div {
+  display: grid;
+  justify-self: center;
+}

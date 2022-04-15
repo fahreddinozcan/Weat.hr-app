@@ -1,0 +1,137 @@
+.calendar {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+
+  /* padding: 2rem 4rem; */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../img/calendar-bg.jpg");
+  background-size: 115%;
+
+  background-position: 0px;
+  background-repeat: no-repeat;
+}
+.calendar-header {
+  display: grid;
+  grid-template-columns: min-content 10rem min-content;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  border-radius: 7px 7px 0 0;
+  padding: 1rem 2rem;
+}
+.calendar-date-div {
+  display: grid;
+  grid-template-rows: auto auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-year-text {
+  font-size: 3rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+}
+.calendar-date-text {
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+.calendar-icon-div {
+  background-color: #1b4de3;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  cursor: pointer;
+
+  transition: all 0.2s 0.1s;
+}
+.calendar-icon-div:hover {
+  background-color: #2755e0;
+}
+.calendar-icon-div:hover {
+  transform: scale(1.1);
+}
+.calendar-icon {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(113deg) brightness(105%)
+    contrast(105%);
+  user-select: none;
+}
+
+/* //////////////// */
+/* //////////////// */
+/* /////Calendar Body/// */
+/* //////////////// */
+/* //////////////// */
+.calendar-body {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-rows: auto auto;
+
+  row-gap: 1rem;
+}
+
+.calendar-body-day {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  display: inline;
+}
+.calendar-body-day-names {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+.day-name {
+  font-weight: 800;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.329);
+}
+.calendar-body-day-numbers {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+  justify-content: space-evenly;
+
+  row-gap: 1.5rem;
+  cursor: pointer;
+}
+.calendar-day-bg {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.1s 0.1s;
+}
+.active-day {
+  background-color: #f76707;
+}
+
+.calendar-day-bg:hover {
+  background-color: #f767078a;
+}
+
+.calendar-blank-bg {
+  width: 2rem;
+  height: 2rem;
+}

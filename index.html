@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="js/controller.js" type='module'></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel='stylesheet' href='css/weather.css'>
+    <link rel='stylesheet' href='css/weather-current.css'>
+    <link rel='stylesheet' href='css/weather-partial-forecast.css'>
+    <link rel='stylesheet' href='css/hourly-forecast.css'>
+    <link rel='stylesheet' href='css/daily-forecast.css'>
+    <link rel='stylesheet' href='css/footer.css'>
+    <link rel='stylesheet' href='css/calendar.css'>
+    <link rel="preconnect" href="css/https://fonts.googleapis.com">
+    <link rel="preconnect" href="css/https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLQRjce7LpcPaKodyAtR52y84HHr7wLrg&libraries=places&language=en-GB"></script>
+    <title>Weat.hr</title>
+  </head>
+  <body>
+
+    <section class="search">
+      <div class="header">
+        <div class="logo">
+          <img class="logo-logo" src='img/logo.png'>
+          <p class="logo-text">Weat.hr</p>
+        </div>
+        <div class="menu-bar">
+          <img src='icons/icon-menu.svg' class='icon-menu'>
+        </div>
+      </div>
+      <div class="search-bar">
+        <form class="search-bar-form">
+          <img src="icons/icon-search.svg" class="icon-search" /></svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Search" autocomplete="off"/>
+        </form>
+        <div class="search-results">
+          <div class='use-cur-location search-result'>
+            <img src='icons/icon-navigation-arrow.svg' class='navigation-icon'>
+            <p class="use-cur-loc-text loc-btn">Use your current location</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="weather-results">
+      <div class="weather">
+        <div class="weather-current">
+        </div>
+        <div class="weather-partial-forecast section">
+        </div>
+        <div class="weather-current-detailed section">
+          
+        </div>
+        <div class="weather-hourly-forecast section">
+          
+        </div>
+        <div class="weather-daily-forecast section">
+          <h3>Daily Forecast</h3>
+          <div class="weather-partial-part">
+            <h4 class="weather-part-name">Morning</h4>
+            <p class="weather-part-degree">-4&deg</p>
+            <p class='weather-part-degree-small'>-1&deg</p>
+            <div class="weather-icon">
+              <img class="icon-cloud" src='icons/icon-cloud.svg'>
+            </div>
+            <div class='icon-umbrella-div'>
+              <img class="icon-umbrella" src='icons/icon-umbrella.svg'>
+              <p class='umbrella-text'>%6</p>
+            </div>
+          </div>
+          <div class="weather-partial-part">
+            <h4 class="weather-part-name">Morning</h4>
+            <p class="weather-part-degree">-4&deg</p>
+            <p class='weather-part-degree-small'>-1&deg</p>
+            <div class="weather-icon">
+              <img class="icon-cloud" src='icons/icon-cloud.svg'>
+            </div>
+            <div class='icon-umbrella-div'>
+              <img class="icon-umbrella" src='icons/icon-umbrella.svg'>
+              <p class='umbrella-text'>%6</p>
+            </div>
+          </div>
+          <div class="weather-partial-part">
+            <h4 class="weather-part-name">Morning</h4>
+            <p class="weather-part-degree">-4&deg</p>
+            <p class='weather-part-degree-small'>-1&deg</p>
+            <div class="weather-icon">
+              <img class="icon-cloud" src='icons/icon-cloud.svg'>
+            </div>
+            <div class='icon-umbrella-div'>
+              <img class="icon-umbrella" src='icons/icon-umbrella.svg'>
+              <p class='umbrella-text'>%6</p>
+            </div>
+          </div>
+          <div class="weather-partial-part">
+            <h4 class="weather-part-name">Morning</h4>
+            <p class="weather-part-degree">-4&deg</p>
+            <p class='weather-part-degree-small'>-1&deg</p>
+            <div class="weather-icon">
+              <img class="icon-cloud" src='icons/icon-cloud.svg'>
+            </div>
+            <div class='icon-umbrella-div'>
+              <img class="icon-umbrella" src='icons/icon-umbrella.svg'>
+              <p class='umbrella-text'>%6</p>
+            </div>
+          </div>
+          <div class="weather-partial-part">
+            <h4 class="weather-part-name">Morning</h4>
+            <p class="weather-part-degree">-4&deg</p>
+            <p class='weather-part-degree-small'>-1&deg</p>
+            <div class="weather-icon">
+              <img class="icon-cloud" src='icons/icon-cloud.svg'>
+            </div>
+            <div class='icon-umbrella-div'>
+              <img class="icon-umbrella" src='icons/icon-umbrella.svg'>
+              <p class='umbrella-text'>%6</p>
+            </div>
+          </div>
+          <button class="next-hours-btn">
+            <p class="next-hours-btn-txt">Next 10 days</p>
+          </button>
+        </div>
+      </div>
+      <div class="calendar">
+        <div class='calendar-header'>
+          <div class="calendar-icon-div">
+            <img class="calendar-icon icon-left" src='icons/icon-left.svg'>
+          </div>
+          <div class="calendar-date-div">
+            <p class="calendar-year-text">2022</p>
+            <p class="calendar-date-text">May</p>
+          </div>
+          <div class="calendar-icon-div">
+            <img class="calendar-icon icon-right" src='icons/icon-right.svg'>
+          </div>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-body-day-names">
+            <div class="calendar-body-day day-name">Mon</div>
+            <div class="calendar-body-day day-name">Tue</div>
+            <div class="calendar-body-day day-name">Wed</div>
+            <div class="calendar-body-day day-name">Thu</div>
+            <div class="calendar-body-day day-name">Fri</div>
+            <div class="calendar-body-day day-name">Sat</div>
+            <div class="calendar-body-day day-name">Sun</div>
+          </div>
+          <div class="calendar-body-day-numbers"></div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+
+    </section>
+  </body>
+</html>
